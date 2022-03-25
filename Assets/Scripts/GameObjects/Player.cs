@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
     float dis = 5;
 
     // Jump force.
-    float thrust = 30;
+    float thrust = 20;
 
     // Number of platforms jumped on.
     int currentPlatformNumber = 0;
@@ -43,7 +43,9 @@ public class Player : MonoBehaviour {
             // Set controls.
             if (Application.platform == RuntimePlatform.Android ||
             Application.platform == RuntimePlatform.IPhonePlayer) MobileControls ();
-            else if (Application.platform == RuntimePlatform.WindowsEditor) DesktopControls ();
+            else if (Application.platform == RuntimePlatform.WindowsEditor ||
+                    Application.platform == RuntimePlatform.OSXEditor ||
+                    Application.platform == RuntimePlatform.WebGLPlayer) DesktopControls ();
 
             // Makes player faster / frame.
             if (dis < 10) dis += 0.06f * Time.deltaTime;

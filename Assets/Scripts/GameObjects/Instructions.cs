@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class TapText : MonoBehaviour {
+public class instructions : MonoBehaviour {
 
     private void Start () {
         // What instructions to show on start of game.
